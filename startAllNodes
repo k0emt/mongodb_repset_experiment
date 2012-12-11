@@ -1,0 +1,4 @@
+#!/bin/bash
+mongod --port 27001 --dbpath n1 --logpath n1/node.log --config repset.conf
+mongod --port 27002 --dbpath n2 --logpath n2/node.log --config repset.conf
+mongod --port 27003 --dbpath n3 --logpath n3/node.log --config repset.conf

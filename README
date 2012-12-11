@@ -1,0 +1,25 @@
+This is a simple experimenting lab for MongoDB high availability with Python/PyMongo.
+
+Instructions:
+* Set up the replica set
+create directories n1, n2, n3
+. startAllNodes
+mongo --port 27001 --shell config.json
+rs.initiate(cfg)
+wait for nodes to come up: rs.status()
+
+* test the writes
+run python durableWrites.py
+kick out the primary with a kill
+verify with rs.status()
+note the error messages to the screen
+
+* test the reads
+run python durableReads.py
+kick out the primary with a kill
+verify with rs.status()
+note the error messages to the screen
+
+References:
+http://api.mongodb.org/python/current/examples/high_availability.html
+http://emptysquare.net/blog/save-the-monkey-reliably-writing-to-mongodb/

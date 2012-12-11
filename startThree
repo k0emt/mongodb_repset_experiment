@@ -1,0 +1,2 @@
+#!/bin/bash
+mongod --port 27003 --dbpath n3 --logpath n3/node.log --config repset.conf
